@@ -196,16 +196,7 @@ i.arrow.alternate.circle.up.outline.icon {
     border-color: #fafafaeb transparent transparent !important;
 }
 
-.ui.bottom.left.popup:before {
-    border-radius: 0 !important;
-    border: 1px solid transparent !important;
-    border-color: #fafafaeb transparent transparent !important;
-    background: #fafafaeb !important;
-    -webkit-box-shadow: 0px 0px 0 0 #fafafaeb !important;
-    box-shadow: 0px 0px 0 0 #fafafaeb !important;
-    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
-}
-
+.ui.bottom.left.popup:before,
 .ui.bottom.right.popup:before {
     border-radius: 0 !important;
     border: 1px solid transparent !important;
@@ -215,6 +206,7 @@ i.arrow.alternate.circle.up.outline.icon {
     box-shadow: 0px 0px 0 0 #fafafaeb !important;
     -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 }
+
 
 .ui.top.left.popup:before {
     border-radius: 0 !important;
