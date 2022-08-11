@@ -4,15 +4,15 @@ function getLocalTime(nS) {
 function getdddata(){
     var bbsurl = "https://daodao-delta-teal.vercel.app/api?q=10"
 
-    var httpRequest = new XMLHttpRequest();//µÚÒ»²½£º½¨Á¢ËùĞèµÄ¶ÔÏó
-    httpRequest.open('GET', bbsurl, true);//µÚ¶ş²½£º´ò¿ªÁ¬½Ó  ½«ÇëÇó²ÎÊıĞ´ÔÚurlÖĞ  ps:"./Ptest.php?name=test&nameone=testone"
-    httpRequest.send();//µÚÈı²½£º·¢ËÍÇëÇó  ½«ÇëÇó²ÎÊıĞ´ÔÚURLÖĞ
+    var httpRequest = new XMLHttpRequest();//ç¬¬ä¸€æ­¥ï¼šå»ºç«‹æ‰€éœ€çš„å¯¹è±¡
+    httpRequest.open('GET', bbsurl, true);//ç¬¬äºŒæ­¥ï¼šæ‰“å¼€è¿æ¥  å°†è¯·æ±‚å‚æ•°å†™åœ¨urlä¸­  ps:"./Ptest.php?name=test&nameone=testone"
+    httpRequest.send();//ç¬¬ä¸‰æ­¥ï¼šå‘é€è¯·æ±‚  å°†è¯·æ±‚å‚æ•°å†™åœ¨URLä¸­
     /**
-     * »ñÈ¡Êı¾İºóµÄ´¦Àí³ÌĞò
+     * è·å–æ•°æ®åçš„å¤„ç†ç¨‹åº
      */
     httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-            var json = httpRequest.responseText;//»ñÈ¡µ½json×Ö·û´®£¬»¹Ğè½âÎö
+            var json = httpRequest.responseText;//è·å–åˆ°jsonå­—ç¬¦ä¸²ï¼Œè¿˜éœ€è§£æ
             var obj = eval('(' + json + ')');
             // console.log(obj.data)
             const bbArray = obj.map(e => {
@@ -40,7 +40,7 @@ var generateddHtml = array => {
                 from_icon = '<i class="fas fa-mobile-alt"></i>';
             }else if (array[i].from == "MacBook"){
                 from_icon = '<i class="fas fa-laptop"></i>';
-            }else if (array[i].from == "Î¢ĞÅ¹«ÖÚºÅ"){
+            }else if (array[i].from == "å¾®ä¿¡å…¬ä¼—å·"){
                 from_icon = '<i class="fab fa-weixin" style="font-size: 0.6rem"></i>';
             }else{
                 from_icon = '<i class="fas fa-tools"></i>';
@@ -73,7 +73,7 @@ function urlToLink(str) {
         return '<a href="' + imgurl + '"><img src="' + imgurl + '" /></a>';
     });
     str =str.replace(re,function (website) {
-        return " <a href='" + website + "'rel='noopener' target='_blank'>¨KÁ´½Ó¨L</a> ";
+        return " <a href='" + website + "'rel='noopener' target='_blank'>â†˜é“¾æ¥â†™</a> ";
     });
     str = qqWechatEmotionParser(str)
     return str;
