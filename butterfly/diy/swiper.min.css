@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Swiper 4.1.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/

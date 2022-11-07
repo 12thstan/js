@@ -1,4 +1,4 @@
-let kk = {};
+﻿let kk = {};
 
 kk.showRightMenu = function(isTrue, x=0, y=0){
     let $rightMenu = $('#rightMenu');

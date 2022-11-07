@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+﻿window.addEventListener('load', () => {
   const openSearch = () => {
     document.body.style.cssText = 'width: 100%;overflow: hidden'
     document.querySelector('#algolia-search .search-dialog').style.display = 'block'

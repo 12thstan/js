@@ -1,7 +1,7 @@
-/*电子钟字体*/
+﻿/*电子钟字体*/
 @font-face {
   font-family: 'UnidreamLED';
-  src: url("https://unpkg.com/reverse-stu-allversions@1.0.9/butterfly/diy/UnidreamLED.ttf");
+  src: url("https://npm.elemecdn.com/reverse-stu-allversions@latest/butterfly/diy/UnidreamLED.ttf");
   font-display: swap;
 }
 div#runtime {

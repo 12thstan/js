@@ -1,4 +1,4 @@
-var tipButtons = document.querySelectorAll('.tip-button')
+﻿var tipButtons = document.querySelectorAll('.tip-button')
 
 function coinAudio() {
   var coinAudio = document.getElementById("coinAudio");

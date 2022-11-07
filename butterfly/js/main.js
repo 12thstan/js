@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // 初始化header
+  // 鍒濆鍖杊eader
   const initAdjust = () => {
     adjustMenu()
     document.getElementById('nav').classList.add('show')
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  //判断网址,防止访客网址不写http和https
+  //鍒ゆ柇缃戝潃,闃叉璁垮缃戝潃涓嶅啓http鍜宧ttps
   function wangzhi(e) {
     http = e.slice(0, 4)
     https = e.slice(0, 5)
@@ -81,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * 首頁top_img底下的箭頭
- */
+ * 棣栭爜top_img搴曚笅鐨勭闋? */
   const scrollDownInIndex = () => {
     const $scrollDownEle = document.getElementById('scroll-down')
     $scrollDownEle && $scrollDownEle.addEventListener('click', function () {
@@ -91,9 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * 代碼
- * 只適用於Hexo默認的代碼渲染
- */
+ * 浠ｇ⒓
+ * 鍙仼鐢ㄦ柤Hexo榛樿獚鐨勪唬纰兼覆鏌? */
   const addHighlightTool = function () {
     const highLight = GLOBAL_CONFIG.highlight
     if (!highLight) return
@@ -249,8 +247,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * justified-gallery 圖庫排版
- * 需要 jQuery
+ * justified-gallery 鍦栧韩鎺掔増
+ * 闇€瑕?jQuery
  */
 
   let detectJgJsLoad = false
@@ -276,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * fancybox和 mediumZoom
+ * fancybox鍜?mediumZoom
  */
   const addFancybox = function (ele) {
     const runFancybox = (ele) => {
@@ -334,14 +332,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * 滾動處理
+ * 婊惧嫊铏曠悊
  */
   const scrollFn = function () {
     const $rightside = document.getElementById('rightside')
     const innerHeight = window.innerHeight + 56
 
-    // 當滾動條小于 56 的時候
-    if (document.body.scrollHeight <= innerHeight) {
+    // 鐣舵痪鍕曟灏忎簬 56 鐨勬檪鍊?    if (document.body.scrollHeight <= innerHeight) {
       $rightside.style.cssText = 'opacity: 1; transform: translateX(-38px)'
       return
     }
@@ -446,7 +443,7 @@ document.addEventListener('DOMContentLoaded', function () {
       else mobileToc.close()
     })
 
-    // toc元素點擊
+    // toc鍏冪礌榛炴搳
     $cardToc.addEventListener('click', (e) => {
       e.preventDefault()
       const $target = e.target.classList.contains('toc-link')
@@ -551,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function () {
       typeof FB === 'object' && window.loadFBComment()
       window.DISQUS && document.getElementById('disqus_thread').children.length && setTimeout(() => window.disqusReset(), 200)
     },
-    showOrHideBtn: () => { // rightside 點擊設置 按鈕 展開
+    showOrHideBtn: () => { // rightside 榛炴搳瑷疆 鎸夐垥 灞曢枊
       document.getElementById('rightside-config-hide').classList.toggle('show')
     },
     scrollToTop: () => { // Back to top
@@ -616,8 +613,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /**
  * menu
- * 側邊欄sub-menu 展開/收縮
- * 解決menus在觸摸屏下，滑動屏幕menus_item_child不消失的問題（手機hover的bug)
+ * 鍋撮倞娆剆ub-menu 灞曢枊/鏀剁府
+ * 瑙ｆ焙menus鍦ㄨЦ鎽稿睆涓嬶紝婊戝嫊灞忓箷menus_item_child涓嶆秷澶辩殑鍟忛锛堟墜姗焗over鐨刡ug)
  */
   const clickFnOfSubMenu = function () {
     document.querySelectorAll('#sidebar-menus .expand').forEach(function (e) {
@@ -641,8 +638,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * 複製時加上版權信息
- */
+ * 瑜囪＝鏅傚姞涓婄増娆婁俊鎭? */
   const addCopyright = () => {
     const copyright = GLOBAL_CONFIG.copyright
     document.body.oncopy = (e) => {
@@ -666,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * 網頁運行時間
+ * 缍查爜閬嬭鏅傞枔
  */
   const addRuntime = () => {
     const $runtimeCount = document.getElementById('runtimeshow')
@@ -677,8 +673,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /**
- * 最後一次更新時間
- */
+ * 鏈€寰屼竴娆℃洿鏂版檪闁? */
   const addLastPushDate = () => {
     const $lastPushDateItem = document.getElementById('last-push-date')
     if ($lastPushDateItem) {

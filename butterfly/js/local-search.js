@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+﻿window.addEventListener('load', () => {
   let loadFlag = false
   const openSearch = function () {
     document.body.style.cssText = 'width: 100%;overflow: hidden'

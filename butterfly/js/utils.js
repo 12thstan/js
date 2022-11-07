@@ -1,4 +1,4 @@
-const btf = {
+﻿const btf = {
   debounce: function (func, wait, immediate) {
     let timeout
     return function () {
